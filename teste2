@@ -1,0 +1,216 @@
+PS C:\gasto_facil> & $adb shell cmd jobscheduler run -f com.example.gastofacil 20
+adb.exe: no devices/emulators found
+PS C:\gasto_facil> & $adb shell cmd jobscheduler run -f com.example.gastofacil 20
+Running job [FORCED]
+PS C:\gasto_facil> & $adb shell cmd jobscheduler run -f com.example.gastofacil 20
+Could not find job 20 in package com.example.gastofacil / user 0
+PS C:\gasto_facil> & $adb shell date
+Thu Nov  5 21:35:10 -03 2026
+PS C:\gasto_facil> & $adb logcat -d -v time | Select-String -Pattern "FinancialReminderWorker|WM-WorkerWrapper|AndroidRuntime|gastofacil" | Select-Object -Last 120                                                                                                                                     
+
+11-02 21:08:29.924 I/adbd    (25328): adbd service requested 'shell,v2,TERM=xterm-256color,raw:cmd jobscheduler get-job-state 
+com.example.gastofacil 20'
+11-02 21:08:31.089 I/adbd    (25328): adbd service requested 'shell,v2,TERM=xterm-256color,raw:dumpsys jobscheduler com.example.gastofacil'
+11-02 21:09:17.323 D/WM-WorkerWrapper(20842): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:09:47.511 I/WM-WorkerWrapper(20842): Worker result SUCCESS for Work [ id=7c7a2a49-4ed6-4e2e-8fa6-0fc561a322a9, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:12:59.146 D/WM-WorkerWrapper(26488): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:12:59.197 D/WM-WorkerWrapper(26488): Starting work for 
+com.whatsapp.ui.wds.metrics.logging.network.HierarchyUploadScheduler$HierarchyUploadWorker
+11-02 21:12:59.211 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=63a8c730-c023-49e7-b594-d68a6fb6b626, tags={ 
+com.whatsapp.ui.wds.metrics.logging.network.HierarchyUploadScheduler$HierarchyUploadWorker } ]
+11-02 21:13:29.210 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=bfac6c50-c473-48d6-9ea4-524fe6df9bd3, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:13:46.878 D/WM-WorkerWrapper(26488): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:14:16.932 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=154a47ed-21a0-4a74-adfd-3d19b42e3deb, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:14:37.636 D/WM-WorkerWrapper(26488): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:15:07.685 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=19499d7b-6bc2-42ff-9ef8-951ace3da109, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:16:54.224 D/WM-WorkerWrapper(26488): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:17:21.494 D/test##>>(19794): com.example.gastofacil=4304-360.04001845027784-0
+11-02 21:17:21.601 I/PowerRankHelperHolder(19794): screenPowerMap {com.whatsapp=73.560256725, com.android.deskclock=85.84440660805556, 
+com.miui.securitycenter=0.08388618361111114, android=0.13850002, com.google.android.providers.media.module=0.6887365125000001, 
+com.google.android.apps.messaging=164.5113441063889, com.picpay=6.796537213333334, com.google.android.googlequicksearchbox=145.30463040472222, 
+com.google.android.contacts=0.36322801138888894, com.miui.home=455.1615279627779, com.google.android.dialer=15.172587550000001, 
+com.google.android.gm=1.5485071680555558, com.android.systemui=0.24446591694444447, com.mercadopago.wallet=115.54288896750002, 
+com.example.gastofacil=360.04001845027784}
+11-02 21:17:21.968 I/WM-WorkerWrapper(27213): Worker result SUCCESS for Work [ id=7bbe579c-2190-4c84-809f-33166438fcb6, tags={ 
+com.xiaomi.market.push.timedPush.RetryPushWorker, start_retry_push_period_work } ]
+11-02 21:17:24.262 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=a96afc7b-a83f-4c31-8267-fd41dc676111, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:18:01.402 D/WM-WorkerWrapper(26488): Starting work for 
+com.whatsapp.ui.wds.metrics.logging.network.HierarchyUploadScheduler$HierarchyUploadWorker
+11-02 21:18:01.407 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=69d8740c-4419-4cf9-829f-f66d5eb964f0, tags={ 
+com.whatsapp.ui.wds.metrics.logging.network.HierarchyUploadScheduler$HierarchyUploadWorker } ]
+11-02 21:18:08.491 D/WM-WorkerWrapper(26488): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:18:38.815 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=9a5ebd1f-0255-466f-b248-ba64b3c0ebda, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:18:43.265 D/WM-WorkerWrapper(27476): Status for 2c4eb754-5085-479c-971c-be4cfa678aeb is ENQUEUED; not doing any work and rescheduling for 
+later execution
+11-02 21:18:43.415 D/WM-WorkerWrapper(27476): Starting work for com.google.apps.tiktok.contrib.work.TikTokListenableWorker
+11-02 21:18:43.568 D/WM-WorkerWrapper(27476): Starting work for com.google.apps.tiktok.contrib.work.TikTokListenableWorker
+11-02 21:18:43.619 D/WM-WorkerWrapper(27476): Starting work for com.google.apps.tiktok.contrib.work.TikTokListenableWorker
+11-02 21:18:43.641 I/WM-WorkerWrapper(27476): Worker result SUCCESS for Work [ id=a677df4d-adb6-42e7-89b7-0f95471ed660, 
+class=com.google.apps.tiktok.contrib.work.TikTokListenableWorker, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker,com.google.apps
+.tiktok.sync.impl.workmanager.SyncPeriodicWorker,sync_constraint:charger_connected,TikTokWorker#com.google.apps.tiktok.sync.impl.workmanager.SyncPe
+riodicWorker } ]
+11-02 21:18:43.723 I/WM-WorkerWrapper(27476): Worker result FAILURE for Work [ id=0676695f-34d0-40a9-a37b-1e2f8619ce8e, 
+class=com.google.apps.tiktok.contrib.work.TikTokListenableWorker, tags={ 
+com.google.apps.tiktok.contrib.work.TikTokListenableWorker,TikTokWorker#com.android.dialer.dobby.impl.storage.postcall.DobbyMetricsWorker } ]
+11-02 21:18:44.330 D/WM-WorkerWrapper(27476): Delaying execution for com.google.apps.tiktok.contrib.work.TikTokListenableWorker because it is 
+being executed before schedule.
+11-02 21:18:44.332 D/WM-WorkerWrapper(27476): Status for 0676695f-34d0-40a9-a37b-1e2f8619ce8e is ENQUEUED; not doing any work and rescheduling for 
+later execution
+11-02 21:18:49.411 I/WM-WorkerWrapper(27476): Worker result SUCCESS for Work [ id=2c4eb754-5085-479c-971c-be4cfa678aeb, 
+class=com.google.apps.tiktok.contrib.work.TikTokListenableWorker, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker,com.google.apps
+.tiktok.sync.impl.workmanager.SyncPeriodicWorker,sync_constraint:none,TikTokWorker#com.google.apps.tiktok.sync.impl.workmanager.SyncPeriodicWorker 
+} ]
+11-02 21:19:05.941 D/WM-WorkerWrapper(28441): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:19:05.951 I/WM-WorkerWrapper(28441): Worker result SUCCESS for Work [ id=a34a8425-ac23-48f8-932c-6b6f6c2d29e6, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-02 21:19:20.649 D/WM-WorkerWrapper(28441): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:19:21.684 D/WM-WorkerWrapper(28441): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:19:21.697 I/WM-WorkerWrapper(28441): Worker result SUCCESS for Work [ id=ab7c0c87-d0b8-4ad3-a30f-15e806d7dfe2, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-02 21:19:21.703 I/WM-WorkerWrapper(28441): Worker result SUCCESS for Work [ id=c49b2afe-81fd-41c3-a63b-405537020d25, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,sim_state_update_queue-WORK_TYPE_UPDATE_PHONE_SIMS_STATE } ]
+11-02 21:19:56.009 D/WM-WorkerWrapper(26488): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:20:26.335 I/WM-WorkerWrapper(26488): Worker result SUCCESS for Work [ id=9362ec16-3cd4-432c-9116-15ecb17072e0, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:22:45.607 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:23:15.674 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=f199554f-f6d4-4fd5-9ea1-ee765976a8c1, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:24:55.335 D/WM-WorkerWrapper(31126): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:24:55.349 I/WM-WorkerWrapper(31126): Worker result SUCCESS for Work [ id=12d45df7-c1c1-4063-a454-aa7a67a94150, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-02 21:25:10.020 D/WM-WorkerWrapper(31126): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:25:11.039 D/WM-WorkerWrapper(31126): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:25:11.050 I/WM-WorkerWrapper(31126): Worker result SUCCESS for Work [ id=03b12964-4025-4b00-bcbe-4c93051a0368, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-02 21:25:11.489 I/WM-WorkerWrapper(31126): Worker result SUCCESS for Work [ id=7412430b-4c62-4894-8026-4387229fdabf, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,sim_state_update_queue-WORK_TYPE_UPDATE_PHONE_SIMS_STATE } ]
+11-02 21:25:23.875 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:25:53.922 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=3ad93188-b5a2-4590-83da-47868f5fccf7, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:26:13.956 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:26:44.006 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=7624e428-f988-4ddb-a681-ec5ede7bf194, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:27:04.280 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:27:38.705 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=284c33ab-070d-42e1-822f-97df364b61af, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:27:47.941 D/WM-WorkerWrapper(29840): Starting work for 
+com.whatsapp.ui.wds.metrics.logging.network.HierarchyUploadScheduler$HierarchyUploadWorker
+11-02 21:27:47.951 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=85082a35-0bb3-4dca-a79b-67948f50d924, tags={ 
+com.whatsapp.ui.wds.metrics.logging.network.HierarchyUploadScheduler$HierarchyUploadWorker } ]
+11-02 21:27:49.523 D/WM-WorkerWrapper(32335): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:27:49.533 I/WM-WorkerWrapper(32335): Worker result SUCCESS for Work [ id=f2cc5fb6-af8f-4368-bdb4-90a785444c7b, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-02 21:28:03.763 D/WM-WorkerWrapper(32335): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:28:04.553 D/WM-WorkerWrapper(32335): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-02 21:28:04.579 I/WM-WorkerWrapper(32335): Worker result SUCCESS for Work [ id=74baf1a9-c589-4723-9fd8-3e115a2d013d, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-02 21:28:05.405 I/WM-WorkerWrapper(32335): Worker result SUCCESS for Work [ id=dd6b93ae-6f69-4b5a-92b8-c30edb4ec605, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,sim_state_update_queue-WORK_TYPE_UPDATE_PHONE_SIMS_STATE } ]
+11-02 21:28:14.694 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:28:44.730 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=e30f143e-4fd8-43e7-a314-c388f3ddf0d6, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-02 21:32:00.982 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-02 21:32:27.924 I/WM-WorkerWrapper( 1516): Worker result SUCCESS for Work [ id=7bbe579c-2190-4c84-809f-33166438fcb6, tags={ 
+com.xiaomi.market.push.timedPush.RetryPushWorker, start_retry_push_period_work } ]
+11-02 21:32:28.357 D/test##>>(19794): com.example.gastofacil=4304-360.04001845027784-0
+11-02 21:32:28.513 I/PowerRankHelperHolder(19794): screenPowerMap {com.whatsapp=73.560256725, com.android.deskclock=85.84440660805556, 
+com.miui.securitycenter=0.08388618361111114, android=0.13850002, com.google.android.providers.media.module=0.6887365125000001, 
+com.google.android.apps.messaging=164.5113441063889, com.picpay=6.796537213333334, com.google.android.googlequicksearchbox=145.30463040472222, 
+com.google.android.contacts=0.36322801138888894, com.miui.home=455.1615279627779, com.google.android.dialer=15.172587550000001, 
+com.google.android.gm=1.5485071680555558, com.android.systemui=0.24446591694444447, com.mercadopago.wallet=115.54288896750002, 
+com.example.gastofacil=360.04001845027784}
+11-02 21:32:31.007 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=faad6c43-d1b3-4de7-9bfe-6b0b24bbf627, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558): Work [ id=eaf6c6d3-af6a-4bb8-9958-86128b412f81, 
+class=com.google.android.apps.calendar.appsearch.workmanager.TaskAppSearchWorker, tags={ 
+com.google.android.apps.calendar.appsearch.workmanager.TaskAppSearchWorker,TaskAppSearchInvalidationRefreshWork } ] failed because it threw an 
+exception/error
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558): java.lang.IllegalArgumentException: tokenizerType is out of range of [0, 1] (too high)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at android.app.appsearch.internal.util.Preconditions.checkArgumentInRange(Preconditions.java:531)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at 
+android.app.appsearch.AppSearchSchema$StringPropertyConfig$Builder.setTokenizerType(AppSearchSchema.java:579)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.adp$$ExternalSyntheticApiModelOutline0.m$1(D8$$SyntheticClass:6)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.ael.e(PG:328)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.aeka.b(PG:129)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.joj.b(PG:265)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.jnj.a(PG:14)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.atun.e(PG:3)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.atup.run(PG:46)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.nxl.run(PG:5)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at 
+java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:323)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at cal.nxk.run(PG:66)
+11-05 21:32:41.607 E/WM-WorkerWrapper( 2558):   at java.lang.Thread.run(Thread.java:1571)
+11-05 21:32:51.998 D/test##>>(19794): com.example.gastofacil=4304-360.04001845027784-0
+11-05 21:32:52.179 I/PowerRankHelperHolder(19794): screenPowerMap {com.whatsapp=73.560256725, com.android.deskclock=85.84440660805556, 
+com.miui.securitycenter=0.08388618361111114, android=0.13850002, com.google.android.providers.media.module=0.6887365125000001, 
+com.google.android.apps.messaging=164.5113441063889, com.picpay=6.796537213333334, com.google.android.googlequicksearchbox=145.30463040472222, 
+com.google.android.contacts=0.36322801138888894, com.miui.home=455.1615279627779, com.google.android.dialer=15.172587550000001, 
+com.google.android.gm=1.5485071680555558, com.android.systemui=0.24446591694444447, com.mercadopago.wallet=115.54288896750002, 
+com.example.gastofacil=360.04001845027784}
+11-05 21:33:05.509 D/WM-WorkerWrapper( 5372): Starting work for 
+com.google.android.apps.messaging.shared.rcsprovisioning.RcsProvisioningListenableWorker
+11-05 21:33:05.523 D/WM-WorkerWrapper( 5372): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-05 21:33:05.546 I/WM-WorkerWrapper( 5372): Worker result SUCCESS for Work [ id=405262c3-5205-44ec-8cfd-cdcbf6bec94e, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-05 21:33:05.621 D/WM-WorkerWrapper( 5372): Starting work for 
+com.google.android.apps.messaging.shared.rcsprovisioning.RcsProvisioningListenableWorker
+11-05 21:33:06.201 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.cron.daily.RandomizedDailyCronWorker
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840): Work [ id=daffca78-3b8d-424a-8b74-8ad11adc65a8, tags={ 
+com.whatsapp.infra.cron.daily.RandomizedDailyCronWorker,tag.whatsapp.cron.daily.randomized } ] was cancelled
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840): X.NlE
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.NB6.A01(:6)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.Lxp.A00(:128)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.NcM.run(:576)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.MqC.A08(:3)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.Mmc.A01(:245)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.Mmc.A00(:191)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.Nh0.invoke(:255)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.Hxp.run(:236)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at X.NZH.run(:2)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-05 21:33:06.311 I/WM-WorkerWrapper(29840):   at java.lang.Thread.run(Thread.java:1571)
+11-05 21:33:06.313 D/WM-WorkerWrapper(29840): Status for daffca78-3b8d-424a-8b74-8ad11adc65a8 is null ; not doing any work
+11-05 21:33:11.313 I/adbd    ( 5457): adbd service requested 'shell,v2,TERM=xterm-256color,raw:cmd jobscheduler run -f com.example.gastofacil 20'
+11-05 21:33:11.353 D/JobScheduler( 1742): executeRunCommand(): com.example.gastofacil/0 20 s=false f=true
+11-05 21:33:11.368 I/AutoStartManagerService( 1742): MIUILOG- Reject service :Intent { 
+cmp=com.example.gastofacil/androidx.work.impl.background.systemjob.SystemJobService } userId : 0 uid : 10658
+11-05 21:33:11.376 E/JobScheduler.Concurrency( 1742): Error executing JobStatus{a53f9d3 #u0a658/20 
+com.example.gastofacil/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10658 TIME=+28d21h18m59s291ms:none READY}
+11-05 21:33:19.445 D/WM-WorkerWrapper( 5372): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-05 21:33:20.310 D/WM-WorkerWrapper( 5372): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-05 21:33:20.339 I/WM-WorkerWrapper( 5372): Worker result SUCCESS for Work [ id=52a2722b-f780-4468-a752-c8d51661313f, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-05 21:33:20.473 I/WM-WorkerWrapper( 5372): Worker result SUCCESS for Work [ id=4a9ba55d-7cd6-441d-b395-852a6bcb58ce, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,sim_state_update_queue-WORK_TYPE_UPDATE_PHONE_SIMS_STATE } ]
+11-05 21:33:24.270 I/adbd    ( 5457): adbd service requested 'shell,v2,TERM=xterm-256color,raw:cmd jobscheduler run -f com.example.gastofacil 20'
+11-05 21:33:24.321 D/JobScheduler( 1742): executeRunCommand(): com.example.gastofacil/0 20 s=false f=true
+11-05 21:34:31.171 D/WM-WorkerWrapper(29840): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-05 21:35:01.296 I/WM-WorkerWrapper(29840): Worker result SUCCESS for Work [ id=d5f26b0b-afc0-48d9-9007-2769a7584c5b, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+
+
+PS C:\gasto_facil> 
