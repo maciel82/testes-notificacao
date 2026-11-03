@@ -1,0 +1,168 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Experimente a nova plataforma cruzada PowerShell https://aka.ms/pscore6
+
+[Android Studio] Your PSReadLine module version (2.0.0) is outdated, which may cause the problem with black lines across the terminal screen:
+https://learn.microsoft.com/windows/terminal/troubleshooting#black-lines-in-powershell-51-6x-70
+Install the latest version by running: 'Install-Module PSReadLine -MinimumVersion 2.0.3 -Scope CurrentUser -Force'
+After the installation, open a new terminal tab.
+
+PS C:\gasto_facil> $adb = "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe"
+PS C:\gasto_facil> & $adb devices
+List of devices attached
+adb-87bb658c0121-ZaZjWr._adb-tls-connect._tcp   device
+
+PS C:\gasto_facil> & $adb shell cmd jobscheduler get-job-state com.example.gastofacil 20
+waiting
+PS C:\gasto_facil> & $adb shell cmd jobscheduler run -f com.example.gastofacil 20
+Running job [FORCED]
+PS C:\gasto_facil> Start-Sleep -Seconds 3
+PS C:\gasto_facil> & $adb logcat -d -v time | Select-String -Pattern "MIUILOG|JobScheduler|FinancialReminderWorker|WM-WorkerWrapper|AndroidRuntime|gastofacil" | Select-Object -Last 80                                                                                                                 
+
+11-05 21:42:46.109 D/WM-SystemJobScheduler(13105): Scheduling work ID f28b09fb-8e2f-4f0f-bc19-306ca999e74a 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66350
+11-05 21:42:46.117 D/WM-SystemJobScheduler(13105): Scheduling work ID ff9ce875-410c-47f4-87c3-3831ae8ef627 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66151
+11-05 21:42:46.124 D/WM-SystemJobScheduler(13105): Scheduling work ID 6f3e1eae-d6b1-4d6a-9c6c-1918e84acbe4 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66643
+11-05 21:42:46.128 D/WM-SystemJobScheduler(13105): Scheduling work ID 5f9cf99c-04f0-4f6b-bdd0-6826a69271e6 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66453
+11-05 21:42:46.136 D/WM-SystemJobScheduler(13105): Scheduling work ID df086b39-cc20-421b-9a44-064e36853c7f 
+(com.google.apps.tiktok.contrib.work.TikTokListenableWorker), Job ID 65668
+11-05 21:42:46.141 D/WM-SystemJobScheduler(13105): Scheduling work ID 3a7c9354-ab1b-4e52-a44a-e67e56336afe 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66649
+11-05 21:42:46.144 D/WM-SystemJobScheduler(13105): Scheduling work ID b32c9854-7f6a-4f10-96a4-54e022cf0eb6 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66647
+11-05 21:42:46.163 D/WM-SystemJobScheduler(13105): Scheduling work ID f0afb8e9-4582-42b2-9a02-f392cc9cc3d8 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66650
+11-05 21:42:46.183 D/WM-SystemJobScheduler(13105): Scheduling work ID 1a37a3f3-ee11-47eb-9ec7-e58b93dc5880 
+(androidx.work.multiprocess.RemoteListenableDelegatingWorker), Job ID 66651
+11-05 21:42:46.208 D/WM-SystemJobScheduler(13105): Scheduling work ID 6ca2f33d-2231-41c7-b026-9f1667a0a24d 
+(com.google.apps.tiktok.contrib.work.TikTokListenableWorker), Job ID 66652
+11-05 21:42:46.216 D/WM-SystemJobScheduler(13105): Scheduling work ID 4db643ef-a473-41a4-8c71-53dcfd163a38 
+(com.google.apps.tiktok.contrib.work.TikTokListenableWorker), Job ID 66653
+11-05 21:42:46.232 D/WM-SystemJobScheduler(13105): Scheduling work ID 9ec5cbc8-2603-4dc8-9827-2c79dc598d2e 
+(com.google.apps.tiktok.contrib.work.TikTokListenableWorker), Job ID 66654
+11-05 21:42:50.808 D/WM-SystemJobScheduler(12958): Scheduling work ID 70f6540c-5198-4726-bbe0-ba80edf0426bJob ID 454335
+11-05 21:42:53.246 D/WM-WorkerWrapper(12308): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-05 21:42:54.000 D/WM-SystemJobScheduler(12958): Scheduling work ID 430d4532-651a-45e7-b653-97735476cdbaJob ID 454336
+11-05 21:42:54.838 I/WM-WorkerWrapper(12308): Worker result SUCCESS for Work [ id=8e28522d-1561-4970-b596-2531115e69dc, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,sim_state_update_queue-WORK_TYPE_UPDATE_PHONE_SIMS_STATE } ]
+11-05 21:42:55.819 D/WM-WorkerWrapper(12308): Starting work for com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-05 21:42:55.835 I/WM-WorkerWrapper(12308): Worker result SUCCESS for Work [ id=ee7ba507-1d58-4cbc-8c75-9ed3e46468e1, 
+class=com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim, tags={ 
+com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-05 21:42:56.057 D/WM-SystemJobScheduler(12308): Cancelling work ID 3fc7fdd8-1de6-4c82-8122-32ed2e334ee5, Job ID 1287
+11-05 21:42:56.091 D/WM-SystemJobScheduler(12308): Scheduling work ID 3fc7fdd8-1de6-4c82-8122-32ed2e334ee5 
+(com.google.android.libraries.mdi.download.workmanager.workers.PeriodicWorker), Job ID 1293
+11-05 21:42:56.157 D/WM-SystemJobScheduler(12308): Cancelling work ID eb21d399-b1c8-4b3a-b06c-abdfc795abf0, Job ID 1288
+11-05 21:42:56.186 D/WM-SystemJobScheduler(12308): Scheduling work ID eb21d399-b1c8-4b3a-b06c-abdfc795abf0 
+(com.google.android.libraries.mdi.download.workmanager.workers.PeriodicWorker), Job ID 1294
+11-05 21:42:56.194 D/WM-SystemJobScheduler(12308): Cancelling work ID 058d7ec2-e66f-4de2-bb32-ef9f373c92f9, Job ID 1290
+11-05 21:42:56.233 D/WM-SystemJobScheduler(12308): Cancelling work ID be8ab71a-ccad-4462-98fb-c4f4feab0356, Job ID 1289
+11-05 21:42:56.258 D/WM-SystemJobScheduler(12308): Scheduling work ID be8ab71a-ccad-4462-98fb-c4f4feab0356 
+(com.google.android.libraries.mdi.download.workmanager.workers.PeriodicWorker), Job ID 1295
+11-05 21:42:58.416 D/WM-SystemJobScheduler(12958): Scheduling work ID f6de6c87-c673-4d54-94b9-ace8e7da4fd2Job ID 454337
+11-05 21:43:14.798 I/WM-WorkerWrapper(12958): Worker result SUCCESS for Work [ id=9886cd6d-5eee-49fd-8d10-98ea92010794, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-05 21:43:14.810 D/WM-SystemJobService(12958): 9886cd6d-5eee-49fd-8d10-98ea92010794 executed on JobScheduler
+11-05 21:43:45.016 D/WM-SystemJobScheduler(12958): Scheduling work ID cda9e9b3-d5c6-4de0-932a-5589aa7a537aJob ID 454338
+11-05 21:43:45.076 D/WM-WorkerWrapper(12958): Starting work for com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker
+11-05 21:44:14.413 W/ActivityManager( 1742): Background start not allowed: service Intent { 
+cmp=com.instagram.android/com.instagram.jobscheduler.bgfetch.scheduler.IgBgFetchTaskLifeService (has extras) } to 
+com.instagram.android/com.instagram.jobscheduler.bgfetch.scheduler.IgBgFetchTaskLifeService from pid=14145 uid=10397 pkg=com.instagram.android 
+startFg?=false
+11-05 21:44:15.324 I/WM-WorkerWrapper(12958): Worker result SUCCESS for Work [ id=cda9e9b3-d5c6-4de0-932a-5589aa7a537a, tags={ 
+com.whatsapp.infra.networking.xmpp.lifecycle.XmppLifecycleWorker } ]
+11-05 21:44:15.331 D/WM-SystemJobService(12958): cda9e9b3-d5c6-4de0-932a-5589aa7a537a executed on JobScheduler
+11-05 21:44:16.796 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.browser.lite.BrowserLiteIntentService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.796 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.browser.lite.BrowserLiteInMainProcessIntentService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.796 W/ServiceInfoParser(14145): X.00JU: Service instagram.features.creation.location.NearbyVenuesService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.796 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.contacts.ccu.impl.CCUJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.796 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.lazyload.download.ModuleDownloadJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.797 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.papaya.fb.instagram.papaya.PapayaExecutionJobService is missing meta 
+key com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.810 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.appcomponentmanager.AppComponentManagerService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.811 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.backgroundsync.BackgroundSyncJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.811 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.gallery.scanner.MediaScannerJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.811 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.util.offline.BackgroundPrefetchJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.811 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.analytics2.fabric.onefabric.FFAlarmUploadJobService is missing meta 
+key com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.811 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.jobscheduler.bgfetch.scheduler.IgBgFetchSchedulerService is missing 
+meta key com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.812 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.publisher.TransactionRevivalJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.812 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.publisher.HeartbeatJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.812 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.notifications.push.GCMJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.812 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.notifications.push.IgPushRegistrationService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.812 W/ServiceInfoParser(14145): X.00JU: Service com.instagram.notifications.push.ADMMessageJobHandler is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.812 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.voltron.download.scheduledinstaller.OxygenScheduledInstallerJobService 
+is missing meta key com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.812 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.delayedworker.DelayedWorkerService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.813 W/ServiceInfoParser(14145): X.00JU: Service 
+com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.813 W/ServiceInfoParser(14145): X.00JU: Service 
+com.facebook.oxygen.preloads.sdk.firstparty.managedappcache.IsManagedAppCacheJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.813 W/ServiceInfoParser(14145): X.00JU: Service com.google.android.gms.analytics.AnalyticsJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.813 W/ServiceInfoParser(14145): X.00JU: Service androidx.work.impl.background.systemjob.SystemJobService is missing meta key 
+com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.813 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.analytics2.logger.service.LollipopUploadSafeService is missing meta 
+key com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.813 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.analytics2.logger.legacy.uploader.LollipopUploadService is missing 
+meta key com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:16.813 W/ServiceInfoParser(14145): X.00JU: Service com.facebook.analytics2.logger.legacy.uploader.Analytics2UploadService is missing 
+meta key com.facebook.common.jobscheduler.compat.jobIds
+11-05 21:44:58.220 I/adbd    ( 5457): adbd service requested 'shell,v2,TERM=xterm-256color,raw:cmd jobscheduler get-job-state 
+com.example.gastofacil 20'
+11-05 21:44:59.787 I/adbd    ( 5457): adbd service requested 'shell,v2,TERM=xterm-256color,raw:cmd jobscheduler run -f com.example.gastofacil 20'
+11-05 21:44:59.859 D/JobScheduler( 1742): executeRunCommand(): com.example.gastofacil/0 20 s=false f=true
+11-05 21:44:59.921 D/Boost   ( 1742): hostingType=service, 
+hostingName={com.example.gastofacil/androidx.work.impl.background.systemjob.SystemJobService}, callerPackage=android, isSystem=true, 
+isBoostNeeded=false.
+11-05 21:44:59.922 I/ActivityManager( 1742): Start proc 14614:com.example.gastofacil/u0a658 for service 
+{com.example.gastofacil/androidx.work.impl.background.systemjob.SystemJobService} caller=android
+11-05 21:45:00.108 I/SmartPower.com.example.gastofacil/10658(14614)( 1742): died->background(158963ms) R(process start ) adj=-10000.
+11-05 21:45:00.109 I/SmartPower( 1742): com.example.gastofacil/10658 state=died adj=900 proc size=1 move to background process start 
+11-05 21:45:00.134 W/MQSService( 4238): CallerName:com.example.gastofacil,calling Uid:10658
+11-05 21:45:00.134 D/MQSService( 4238): registerApplicationScoutThread pid = 14614, packageName = com.example.gastofacil
+11-05 21:45:01.297 D/nativeloader(14614): Configuring clns-4 for other apk 
+/data/app/~~TixgD1OX1q-7u549VAvAXg==/com.example.gastofacil-vV3J-nFpNyPuB4-q9rEjyA==/base.apk. target_sdk_version=34, uses_libraries=, 
+library_path=/data/app/~~TixgD1OX1q-7u549VAvAXg==/com.example.gastofacil-vV3J-nFpNyPuB4-q9rEjyA==/lib/arm64, 
+permitted_path=/data:/mnt/expand:/data/user/0/com.example.gastofacil
+11-05 21:45:01.331 V/GraphicsEnvironment(14614): ANGLE Developer option for 'com.example.gastofacil' set to: 'default'
+11-05 21:45:01.335 I/ForceDarkHelperStubImpl(14614): initialize for com.example.gastofacil , ForceDarkOrigin
+11-05 21:45:01.510 D/WM-Schedulers(14614): Created SystemJobScheduler and enabled SystemJobService
+11-05 21:45:01.577 I/SmartPower( 1742): com.example.gastofacil/10658 state=background adj=250 proc size=1 move to inactive adj below visible
+11-05 21:45:01.649 D/WM-SystemJobScheduler(14614): Reconciling jobs
+11-05 21:45:01.867 D/WM-SystemJobScheduler(14614): Scheduling work ID 082fe826-7b74-4ad0-9921-a32248338db5 
+(com.example.gastofacil.data.service.FinancialReminderWorker), Job ID 20
+11-05 21:45:02.088 D/WM-Processor(14614): WorkerWrapper interrupted for 082fe826-7b74-4ad0-9921-a32248338db5 
+(com.example.gastofacil.data.service.FinancialReminderWorker), reason: 1
+11-05 21:45:02.119 D/WM-WorkerWrapper(14614): Status for 082fe826-7b74-4ad0-9921-a32248338db5 is ENQUEUED; not doing any work and rescheduling for 
+later execution
+11-05 21:45:02.307 D/WM-SystemJobScheduler(14614): Cancelling work ID 082fe826-7b74-4ad0-9921-a32248338db5, Job ID 20
+11-05 21:45:02.439 D/WM-SystemJobScheduler(14614): Scheduling work ID 082fe826-7b74-4ad0-9921-a32248338db5 
+(com.example.gastofacil.data.service.FinancialReminderWorker), Job ID 36
+11-05 21:45:07.536 D/ProfileInstaller(14614): Installing profile for com.example.gastofacil
+
+
+PS C:\gasto_facil> 
